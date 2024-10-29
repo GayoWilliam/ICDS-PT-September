@@ -78,29 +78,29 @@ charts = dbc.Container(
                 dbc.Row(
                     children = [
                         dbc.Col(
-                            dcc.Graph(id = "category_quantity_distribution")
+                            dcc.Graph(id = "category_quantity_distribution", responsive = True)
                         ),
                         dbc.Col(
-                            dcc.Graph(id = "category_subcategory_sales_distribution")
+                            dcc.Graph(id = "category_subcategory_sales_distribution", responsive = True)
                         ),
                         dbc.Col(
-                            dcc.Graph(id = "city_quantity_distribution")
+                            dcc.Graph(id = "city_quantity_distribution", responsive = True)
                         )
                     ]
                 ),
                 dbc.Row(
                     children = [
                         dbc.Col(
-                            dcc.Graph(figure = countryquantitydistribution)
+                            dcc.Graph(figure = countryquantitydistribution, responsive = True)
                         ),
                         dbc.Col(
-                            dcc.Graph(id = "city-subcategory-distribution")
+                            dcc.Graph(id = "city-subcategory-distribution", responsive = True)
                         )
                     ]
                 ),
                 dbc.Row(
                     children = [
-                        dcc.Graph(figure = monthlycategorytrenddistribution)
+                        dcc.Graph(figure = monthlycategorytrenddistribution, responsive = True)
                     ]
                 ),
             ],
