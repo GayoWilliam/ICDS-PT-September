@@ -1,9 +1,10 @@
 import dash
-from dash import Dash, dcc, html
+from dash import Dash, dcc
 import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
 
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP] + dmc.styles.ALL, use_pages=True)
+server = app.server
 
 sidebar = dbc.Col(
     children = [
@@ -44,4 +45,4 @@ app.layout = dmc.MantineProvider(
 )
 
 if __name__ == '__main__':
-    app.run(debug = True, use_reloader = True)
+    app.run_server(debug = False, use_reloader = True)
